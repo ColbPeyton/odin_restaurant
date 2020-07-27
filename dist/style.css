@@ -1,9 +1,12 @@
 :root{
-    --primary-color: #F9CB40;
-    --secondary-color:#345995;
-    --light-color:#F7F7FF;
-    --dark-color: #000807;
-    --active-color:#cccdcf;
+    --primary-color: #d90429;
+    --secondary-color:#ef233c;
+    --light-color:#edf2f4;
+    --dark-color: #2b2d42;
+    --active-color:#8d99ae;
+    --background-color: rgba(204, 205, 207, 0.85);
+    --max-width: 900px;
+    --opacity-level: 0.90;
 }
 
 *{
@@ -16,43 +19,165 @@ html,
 body{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: #333;
-
 }
 
 a:visited{
-    color: var(--secondary-color)
+    color: var(--dark-color)
+}
+
+
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+  
+.main-container::after {
+    content: "";
+    background: url('./images/odin_background_2.jpeg') no-repeat 0 0/cover;
+    opacity: var(--opacity-level);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
 
 #header{
+    opacity: 1;
     display: flex;
     align-items: center;
-    max-width: 600px;
-    margin: 1rem auto 0;
+    max-width: var(--max-width);
+    padding-top: 0.5rem;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 #header .tab-container{
     display: flex;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+#header .tab-container .tab{
+    color: var(--light-color);
+    opacity: 0.80;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+
+}
+
+#header .tab-container .active{
+    opacity: 1;
+    color:var(--light-color);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+#content{
+    opacity: 1;
+    max-width: var(--max-width);
+    height: 80vh;
+    margin: 0 auto;
+    /* background: var(--background-color); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* footer */
+#footer{
+    opacity: 1;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background:var(--secondary-color);
+}
+
+#footer .contact,
+#footer .social{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer .contact{
+    padding: 1rem;
+    background-color: #f4f4f48e;
+
+}
+
+#footer .contact div{
+    display: flex;
+    align-items: center;    
+}
+#footer .contact div p{
+    padding-right: 10px;
+}
+
+#footer .social{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+
+/* base page styles */
+.container{
+    padding-top: 1rem;
+
+}
+/* Home Style */
+
+#content .home{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#header .tab-container .tab{
-    text-decoration: none;
-    padding: 10px 20px;
-    background: var(--light-color);
+#content .home .container-color{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 5px 20px 20px ;
 }
 
-#header .tab-container .active{
-    background: var(--active-color);
+.home .heading{
+    text-transform: uppercase;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 10rem;
+    letter-spacing: 5px;
+    color: var(--light-color);
+    line-height: 1;
 }
 
-#content{
-    max-width: 600px;
-    height: 80vh;
-    margin: 0 auto;
-    background: var(--active-color);
-
+.home .container-body{
+    font-size: 0.80rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--light-color);
 }
 
+.home .container-body p span{
+    font-style: italic;
+    font-weight: 800;
+}
 
