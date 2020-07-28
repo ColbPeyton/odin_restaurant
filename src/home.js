@@ -13,11 +13,6 @@ class Home{
 
         return div;
     }
-
-    createImage(){
-        const img = document.createElement('img');
-    }
-
     appendElementsForDisplay(){
         const container = document.createElement('div');
         container.classList.add('home');

@@ -13,6 +13,7 @@ const homeContent = home.appendElementsForDisplay();
 const aboutContent = about.appendElementsForDisplay();
 const menuContent = menu.appendElementsForDisplay();
 
+
 // Render home on inital load
 utility.appendToContainer(content, homeContent);
 

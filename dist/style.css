@@ -4,7 +4,7 @@
     --light-color:#edf2f4;
     --dark-color: #2b2d42;
     --active-color:#8d99ae;
-    --background-color: rgba(204, 205, 207, 0.85);
+    --background-color: rgba(217, 4, 39, 0.90);
     --max-width: 900px;
     --opacity-level: 0.90;
 }
@@ -19,6 +19,7 @@ html,
 body{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    overflow: hidden;
 }
 
 a:visited{
@@ -179,5 +180,211 @@ a:visited{
 .home .container-body p span{
     font-style: italic;
     font-weight: 800;
+}
+
+
+
+/* About */
+#content .about{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-color);
+    margin-top: 2rem;
+}
+
+#content .about .container{
+    padding-bottom: 4rem;
+    background-color: var(--background-color);
+}
+
+#content .about .container h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+#content .about .container .container-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#content .about .container .container-body .about-tag-line{
+    font-size: 0.80rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#content .about .container .container-body .about-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+#content .about .container .container-body .about-body .about-info {
+    font-size: 0.90rem;
+    font-style: italic;
+    width: 50%;
+}
+
+#content .about .container .container-body .about-body-img{
+    width: 350px;
+    height: 400px;
+    margin-left: 25px;
+}   
+
+#content .about .container .container-body .about-body-img img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* menu */
+
+#content .menu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-color);
+    margin-top: 1rem;
+}
+
+#content .menu .container{
+    width: 100%;
+    padding-bottom: 1rem;
+    background-color: var(--background-color);
+}
+
+
+#content .menu .container h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+#content .menu .container .container-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+#content .menu .container .container-body .menu-tag-line{
+    font-size: 0.80rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+
+
+#content .menu .container .container-body .menuDiv{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'apps veg'
+    'entrees entrees'
+    'drink dessert'
+    ;
+    gap: 0.5rem
+}
+
+#content .menuDiv .apps,
+#content .menuDiv .veg,
+#content .menuDiv .main-course,
+#content .menuDiv .drinks,
+#content .menuDiv .desserts{
+    height: 200px;
+    font-size: 0.80rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-areas: 
+    'name price'
+    'desc';
+}
+
+#content .menu .container .container-body .menuDiv .apps{
+    grid-area: 'apps';
+}
+#content .menu .container .container-body .menuDiv .veg{
+    grid-area: 'veg';
+}
+#content .menu .container .container-body .menuDiv .main-course{
+    height: 150px;
+    grid-area: 'entrees';
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(177, 4, 32, 0.9);
+}
+#content .menu .container .container-body .menuDiv .drinks{
+    grid-area: 'drink';
+}
+#content .menu .container .container-body .menuDiv .desserts{
+    grid-area: 'dessert';
+}
+
+#content .menu .container .container-body .menuDiv .menu-heading{
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+#content .menu .container .container-body .menuDiv .menu-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 5px;
+}
+
+#content .menu .container .container-body .menuDiv .menu-item .name-price{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content .menu-item-name{
+    font-size: 1rem;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+#content .menu-item-desc{
+    font-size: 0.7rem;
+    font-style: italic;
+
+}
+#content .menu-item-price{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#content .menu .container .container-body .menuDiv .main-course .menu-item{
+    width: 50%;
 }
 
